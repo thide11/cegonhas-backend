@@ -23,5 +23,5 @@ try {
         EndpointsUtils::print_error_response("Você não passou o id");
     }
 } catch (DatabaseException $e) {
-    EndpointsUtils::print_error_response($e);
+    EndpointsUtils::print_error_response($e->getMessage());
 }

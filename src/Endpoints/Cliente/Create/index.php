@@ -9,8 +9,8 @@ use Cegonhas\Infrastructure\Dao\ClienteDao;
 use Cegonhas\EndPoints\EndpointsUtils;
 
 $babaDao = new ClienteDao();
-//print_r($_POST);
-if(isset($_POST)) {
+print_r($_POST);
+if(!empty(isset($_POST))) {
     $request_body = file_get_contents('php://input');
     $dados = json_decode($request_body, true);
     //print_r($dados);
